@@ -1,5 +1,10 @@
 # VolumeRendering_vtk
 
+##requirement
+python3
+
+
+
 steps to run
 1. clone the repo
 2. cd VolumeRendering_vtk
