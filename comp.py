@@ -7,7 +7,22 @@ dir_= r"CT"
 reader = vtk.vtkDICOMImageReader()
 reader.SetDirectoryName(dir_)
 reader.Update()
-#print(reader.GetOutput())
+
+
+# dataset info in output.txt
+
+
+file1= open("output.txt","w")
+dim=str(reader.GetOutput().GetDimensions())
+file1.write("dimension"+"".join(dim))
+
+pixel= str(reader.GetOutput().GetScalarRange())
+file1.write("\npixel intensity"+"".join(pixel))
+
+vtkImageData= str(reader.GetOutput())
+file1.write("\nvtkImageData"+"".join(vtkImageData))
+
+file1.close()
 
 #Step 2 Create colour transfer function
 colorFunc = vtk.vtkColorTransferFunction()
@@ -34,30 +49,30 @@ rw.SetSize(800,800)
 iren = vtk.vtkRenderWindowInteractor()
 iren.SetRenderWindow(rw)
 
-fv = [0.0, 0.0, 0.3, 0.9]
-sv= [0.3, 0.0, 0.6, 0.9]
-tv = [0.6, 0.0, 0.9, 0.9]
+fv = [0.0, 0.0, 0.33, 0.99]
+sv= [0.33, 0.0, 0.66, 0.99]
+tv = [0.66, 0.0, 0.99, 0.99]
 # step 4 && step 7
 
 fr = vtk.vtkRenderer()
 
 rw.AddRenderer(fr)
 fr.SetViewport(fv)
-fr.SetBackground(.6, .5, .4)
+#fr.SetBackground(.6, .5, .4)
 
 
 
 sr= vtk.vtkRenderer()
 rw.AddRenderer(sr)
 sr.SetViewport(sv)
-sr.SetBackground(.0, .0, .0)
+#sr.SetBackground(.0, .0, .0)
 sr.SetActiveCamera(fr.GetActiveCamera())
 
 
 tr = vtk.vtkRenderer()
 rw.AddRenderer(tr)
 tr.SetViewport(tv)
-tr.SetBackground(.7, .6, .4)
+#tr.SetBackground(.7, .6, .4)
 tr.SetActiveCamera(fr.GetActiveCamera())
 ## step 5
 # define volume
@@ -79,15 +94,11 @@ volume1.SetProperty(volumeProperty)
 
 # step 6
 
-
-
-
-
 iso = vtk.vtkMarchingCubes()
 iso.SetInputConnection(reader.GetOutputPort())
 iso.ComputeGradientsOn()
 iso.ComputeScalarsOff()
-iso.SetValue(0, 1150)
+iso.SetValue(0, 270)
 
 isoMapper = vtk.vtkPolyDataMapper()
 isoMapper.SetInputConnection(iso.GetOutputPort())

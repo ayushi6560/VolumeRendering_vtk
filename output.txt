@@ -1,0 +1,106 @@
+dimension(512, 512, 188)
+pixel intensity(-1024.0, 3071.0)
+vtkImageDatavtkImageData (0x21e0a90)
+  Debug: Off
+  Modified Time: 250
+  Reference Count: 2
+  Registered Events: (none)
+  Information: 0x21df7e0
+  Data Released: False
+  Global Release Data: Off
+  UpdateTime: 251
+  Field Data:
+    Debug: Off
+    Modified Time: 176
+    Reference Count: 1
+    Registered Events: (none)
+    Number Of Arrays: 0
+    Number Of Components: 0
+    Number Of Tuples: 0
+  Number Of Points: 49283072
+  Number Of Cells: 48829627
+  Cell Data:
+    Debug: Off
+    Modified Time: 184
+    Reference Count: 1
+    Registered Events: 
+      Registered Observers:
+        vtkObserver (0x21e0920)
+          Event: 33
+          EventName: ModifiedEvent
+          Command: 0x21df830
+          Priority: 0
+          Tag: 1
+    Number Of Arrays: 0
+    Number Of Components: 0
+    Number Of Tuples: 0
+    Copy Tuple Flags: ( 1 1 1 1 1 0 1 1 )
+    Interpolate Flags: ( 1 1 1 1 1 0 0 1 )
+    Pass Through Flags: ( 1 1 1 1 1 1 1 1 )
+    Scalars: (none)
+    Vectors: (none)
+    Normals: (none)
+    TCoords: (none)
+    Tensors: (none)
+    GlobalIds: (none)
+    PedigreeIds: (none)
+    EdgeFlag: (none)
+  Point Data:
+    Debug: Off
+    Modified Time: 250
+    Reference Count: 1
+    Registered Events: 
+      Registered Observers:
+        vtkObserver (0x21e0770)
+          Event: 33
+          EventName: ModifiedEvent
+          Command: 0x21df830
+          Priority: 0
+          Tag: 1
+    Number Of Arrays: 1
+    Array 0 name = DICOMImage
+    Number Of Components: 1
+    Number Of Tuples: 49283072
+    Copy Tuple Flags: ( 1 1 1 1 1 0 1 1 )
+    Interpolate Flags: ( 1 1 1 1 1 0 0 1 )
+    Pass Through Flags: ( 1 1 1 1 1 1 1 1 )
+    Scalars: 
+      Debug: Off
+      Modified Time: 250
+      Reference Count: 1
+      Registered Events: (none)
+      Name: DICOMImage
+      Data type: short
+      Size: 49283072
+      MaxId: 49283071
+      NumberOfComponents: 1
+      Information: 0x21f2550
+        Debug: Off
+        Modified Time: 265
+        Reference Count: 1
+        Registered Events: (none)
+        PER_COMPONENT: vtkInformationVector(0x21e08d0)
+      Name: DICOMImage
+      Number Of Components: 1
+      Number Of Tuples: 49283072
+      Size: 49283072
+      MaxId: 49283071
+      LookupTable: (none)
+    Vectors: (none)
+    Normals: (none)
+    TCoords: (none)
+    Tensors: (none)
+    GlobalIds: (none)
+    PedigreeIds: (none)
+    EdgeFlag: (none)
+  Bounds: 
+    Xmin,Xmax: (0, 249.512)
+    Ymin,Ymax: (0, 249.512)
+    Zmin,Zmax: (0, 130.899)
+  Compute Time: 269
+  Spacing: (0.488281, 0.488281, 0.699997)
+  Origin: (0, 0, 0)
+  Dimensions: (512, 512, 188)
+  Increments: (0, 0, 0)
+  Extent: (0, 511, 0, 511, 0, 187)
+
